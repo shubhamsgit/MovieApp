@@ -37,3 +37,7 @@ jobs:
             -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
             -Pandroid.injected.signing.key.alias=$KEYSTORE_ALIAS_NAME \
             -Pandroid.injected.signing.key.password=$KEYSTORE_ALIAS_PASS
+            
+    - name: Echo KEYSTORE_PASSWORD
+      run: |
+          echo "KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}"
