@@ -26,7 +26,7 @@ jobs:
     - name: Build and sign release
       run: |
           chmod +x ./gradlew
-          ./gradlew assembleRelease -Pandroid.injected.signing.store.file=upload-keystore \
+          ./gradlew assembleRelease -Pandroid.injected.signing.store.file=rootProject.file('upload-keystore.jks') \
             -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
             -Pandroid.injected.signing.key.alias=$KEYSTORE_ALIAS_NAME \
             -Pandroid.injected.signing.key.password=$KEYSTORE_ALIAS_PASS
