@@ -19,6 +19,9 @@ jobs:
          java-version: '11'
          distribution: 'temurin'
          cache: gradle
+      - name: Setup Environment
+        env:
+          KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}   
       - name: Echo KEYSTORE_PASSWORD
         run: |
           echo "KEYSTORE_PASSWORD: $KEYSTORE_PASSWORD"
