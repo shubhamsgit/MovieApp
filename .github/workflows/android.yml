@@ -25,9 +25,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build and sign release
       env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEYSTORE_ALIAS_NAME: ${{ secrets.KEYSTORE_ALIAS_NAME }}
-          KEYSTORE_ALIAS_PASS: ${{ secrets.KEYSTORE_ALIAS_PASS }}
+          KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}
+          KEYSTORE_ALIAS_NAME: ${{ env.KEYSTORE_ALIAS_NAME }}
+          KEYSTORE_ALIAS_PASS: ${{ env.KEYSTORE_ALIAS_PASS }}
 
       run: |
           chmod +x ./gradlew
@@ -38,4 +38,4 @@ jobs:
             
     - name: Echo KEYSTORE_PASSWORD
       run: |
-          echo "KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}"
+          echo "KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}"
