@@ -28,7 +28,6 @@ jobs:
           KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}
           KEYSTORE_ALIAS_NAME: ${{ env.KEYSTORE_ALIAS_NAME }}
           KEYSTORE_ALIAS_PASS: ${{ env.KEYSTORE_ALIAS_PASS }}
-          echo "KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}"
     - name: Echo KEYSTORE_PASSWORD
       run: |
           echo "KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}"
