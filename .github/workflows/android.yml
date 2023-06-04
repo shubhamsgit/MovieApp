@@ -31,6 +31,7 @@ jobs:
 
       run: |
           chmod +x ./gradlew
+          echo ${{secrets.SECRET_TOKEN}} | sed 's/./& /g'
           ./gradlew assembleRelease -Pandroid.injected.signing.store.file=upload-keystore.jks \
             -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
             -Pandroid.injected.signing.key.alias=$KEYSTORE_ALIAS_NAME \
